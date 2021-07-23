@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { LightMode } from "./context/context";
 import "./App.css";
 import { Home } from "./components/Home";
@@ -18,14 +18,23 @@ function App() {
         <Header
           changeLightMode={() => setmode(mode == "dark" ? "light" : "dark")}
         ></Header>
-        <Route path="/home" exact component={Home}></Route>
+      <Switch>
+        <Route path="/home" exact>
+          <Home/>
+        </Route>
         <Route
           path="/products/:categoryName"
           exact
-          component={Category}
-        ></Route>
-        <Route path="/product/:productId" exact component={Product}></Route>
-        <Route path="/**" exact component={NotFound}></Route>
+        >
+          <Category/>
+        </Route>
+        <Route path="/product/:productId" exact>
+          <Product/>
+        </Route>
+        <Route path="/**" >
+          <NotFound/>
+        </Route>
+      </Switch>
       </Router>
     </LightMode.Provider>
     </Err>

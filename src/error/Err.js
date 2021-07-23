@@ -28,7 +28,6 @@ export class Err extends React.Component{
             </div>
         )}
         else{
-        console.log("not showing Err")
         return this.props.children}
     }
 }
