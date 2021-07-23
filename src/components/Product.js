@@ -9,11 +9,7 @@ import * as product from '../data/data.json';
 import { LightMode } from "../context/context";
 
 export default ()=> {
-    console.log(useParams().productId, typeof useParams().productId);
   let id = useParams().productId;
-  console.log(id);
-  console.log(id[0], id[1], id[2], id[3]);
-  console.log(id);
   let res = product.data[id[0]-1].products[id[2]-1];
 
 

@@ -8,9 +8,7 @@ export default ()=> {
     // let data=product;
 
     let id = useParams().categoryName[8];
-    console.log(id);
     let data = product.data[id-1];
-    console.log(data);
 
   return (
       <LightMode.Consumer>
