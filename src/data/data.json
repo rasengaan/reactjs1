@@ -1,0 +1,193 @@
+{
+  "data": [
+    {
+      "name": "Category1",
+      "img": "https://occ-0-92-1722.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABddWNPHBX5iJBtMkpKzNe8gWSv6RWERSmSWxtSDXOdJSv5jXblpHCMpfa1WJw9KxSFu_xjpB6jAnZDgWc3lpj3ACB2SW.jpg",
+      "id": 1,
+      "products": [
+        {
+          "id":1.1,
+          "name": "fdghbjhgfhj.1",
+          "image": "https://i.pinimg.com/564x/10/c2/c2/10c2c227f83c695cd4c08981e85a540b.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.2,
+          "name": "product1.2",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/615UoMEsDEL._SY741_.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.3,
+          "name": "product1.3",
+          "image": "https://static.wikia.nocookie.net/tokyo-ghoul-re-birth/images/d/de/Hkk.png/revision/latest?cb=20190211064813",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.4,
+          "name": "product1.4",
+          "image": "https://i.pinimg.com/originals/6f/be/54/6fbe5462db683b14cf6c81c333e2287f.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.5,
+          "name": "product1.5",
+          "image": "https://qph.fs.quoracdn.net/main-qimg-648574b447bf54d6b41f28e50c31efbb",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.6,
+          "name": "product1.6",
+          "image": "https://qph.fs.quoracdn.net/main-qimg-d1502a60f2e0384d1d9f6945f45f4584.webp",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.7,
+          "name": "product1.7",
+          "image": "https://i.pinimg.com/originals/dd/2b/7b/dd2b7b747c84bc56ae9c808b07797a0d.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":1.8,
+          "name": "product1.8",
+          "image": "https://comicvine1.cbsistatic.com/uploads/original/11117/111178572/4376483-6749442075-39823.jpg",
+          "data": "Just some dummy product for display."
+        }
+      ]
+    },
+    {
+      "name": "Category2",
+      "img": "https://i.pinimg.com/originals/42/a5/78/42a5786a772eb4f791a0c2060862f5ff.jpg",
+      "id": 2,
+      "products": [
+        {
+          "id":2.1,
+          "name": "product2.1",
+          "image": "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters_opt/dragon-ball-goku.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.2,
+          "name": "product2.2",
+          "image": "https://cdn.wallpapersafari.com/24/7/PvCjd6.png",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.3,
+          "name": "product2.3",
+          "image": "https://gamepress.gg/dblegends/sites/dblegends/files/styles/522x522/public/2021-03/ExwEzM4XEAg6ptW_0.png",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.4,
+          "name": "product2.4",
+          "image": "https://i.pinimg.com/236x/04/90/19/049019c946070c3b1b9e3ca6c8d7e5c5.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.5,
+          "name": "product2.5",
+          "image": "https://i1.sndcdn.com/artworks-000503765793-wbb9v8-t500x500.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.6,
+          "name": "product2.6",
+          "image": "https://qph.fs.quoracdn.net/main-qimg-cac085872c1880a632e4d786daa8b603",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.7,
+          "name": "product2.7",
+          "image": "https://i.pinimg.com/736x/b0/3a/79/b03a798c13716673aa6c1afca5fc611a.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.8,
+          "name": "product2.8",
+          "image": "https://wallpapercave.com/wp/wp4113638.png",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.9,
+          "name": "product2.9",
+          "image": "https://i.pinimg.com/originals/a0/e1/55/a0e15594a85da1edd82942bb2ef1e061.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.9,
+          "name": "product2.9",
+          "image": "https://i.pinimg.com/originals/56/32/e3/5632e3732e49b6aead9e1bd73ab70a81.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.10,
+          "name": "product2.10",
+          "image": "https://static.wikia.nocookie.net/dbz-dokkanbattle/images/7/73/GokuUltraInstinctHD.jpeg/revision/latest",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.11,
+          "name": "product2.11",
+          "image": "https://static.wikia.nocookie.net/animequote/images/e/e2/Mui_goku.jpg/revision/latest?cb=20210312154720",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":2.12,
+          "name": "product2.12",
+          "image": "https://i2.wp.com/pm1.narvii.com/5742/25cbb4e0a3ff4be9dae591f3b94591d5940d32b3_hq.jpg",
+          "data": "Just some dummy product for display."
+        }
+      ]
+    },
+    {
+      "name": "Category3",
+      "img": "https://www.opfanpage.com/wp-content/uploads/2020/03/OVER_THE_TOP-1024x576.png",
+      "id": 3,
+      "products": [
+        {
+          "id":3.1,
+          "name": "product3.1",
+          "image": "https://www.anime-planet.com/images/characters/monkey-d-luffy-74.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.2,
+          "name": "product3.2",
+          "image": "https://static.wikia.nocookie.net/onepiecetreasurecruiseglobal/images/a/a2/C0727.png/revision/latest",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.3,
+          "name": "product3.3",
+          "image": "https://i.pinimg.com/originals/05/54/9a/05549a602999f9604476f457108757fc.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.4,
+          "name": "product3.4",
+          "image": "https://static.wikia.nocookie.net/onepiece/images/8/87/Gear_Third.png",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.5,
+          "name": "product3.5",
+          "image": "https://wallpaperaccess.com/full/3456733.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.6,
+          "name": "product3.6",
+          "image": "https://i.pinimg.com/736x/e0/de/39/e0de398b37fd51d4160eaf8a79034201.jpg",
+          "data": "Just some dummy product for display."
+        },
+        {
+          "id":3.7,
+          "name": "product3.7",
+          "image": "https://i.pinimg.com/originals/de/8f/de/de8fde6539b6a7050ab3e825ccc501c1.png",
+          "data": "Just some dummy product for display."
+        }
+      ]
+    }
+  ]
+}
