@@ -6,11 +6,13 @@ import { Home } from "./components/Home";
 import Category from "./components/Category";
 import Product from "./components/Product";
 import Header from "./components/Header";
-
+import { Err } from "./error/Err";
+import NotFound from "./components/404";
 function App() {
   const [mode, setmode] = useState("dark");
 
   return (
+    <Err>
     <LightMode.Provider value={{ mode: mode }}>
       <Router>
         <Header
@@ -23,8 +25,10 @@ function App() {
           component={Category}
         ></Route>
         <Route path="/product/:productId" exact component={Product}></Route>
+        <Route path="/**" exact component={NotFound}></Route>
       </Router>
     </LightMode.Provider>
+    </Err>
   );
 }
 

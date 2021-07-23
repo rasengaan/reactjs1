@@ -7,13 +7,27 @@ import { BrowserRouter as Router, Route, useParams } from "react-router-dom";
 import * as product from '../data/data.json';
 
 import { LightMode } from "../context/context";
+import { Err } from "../error/Err";
 
 export default ()=> {
   let id = useParams().productId;
   let res = product.data[id[0]-1].products[id[2]-1];
 
-
+if(res==undefined || res==null)
+  return(
+  <LightMode.Consumer>
+    {
+      context=>(
+        <div className={`container-flex pt-4 bg-${context.mode} text-center text-danger m-0 pl-2`} style={{minHeight:'93%'}}>
+          <h1 style={{fontSize:'calc(1rem + 1vw)'}}>INVALID PRODUCT ID!</h1>
+        </div>
+      )
+    }
+  </LightMode.Consumer>
+)
+else
   return (
+    <Err>
       <LightMode.Consumer>
           {
               context=>(
@@ -41,6 +55,7 @@ export default ()=> {
               )
           }
       </LightMode.Consumer>
+    </Err>
   );
 }
 

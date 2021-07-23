@@ -2,6 +2,7 @@ import react, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, useParams, Link} from "react-router-dom";
 import { LightMode } from "../context/context";
 import * as product from '../data/data.json';
+import { Err } from "../error/Err";
 
 export default ()=> {
 
@@ -9,12 +10,24 @@ export default ()=> {
 
     let id = useParams().categoryName[8];
     let data = product.data[id-1];
-
-  return (
+    if(data== undefined ||data ==null){
+      return(
+        <LightMode.Consumer>
+          {
+            context=>(
+              <div className={`container-flex pt-4 bg-${context.mode} text-center text-danger m-0 pl-2`} style={{minHeight:'93%'}}>
+                <h1 style={{fontSize:'calc(1rem + 1vw)'}}>INVALID CATEGORY!</h1>
+              </div>
+            )
+          }
+        </LightMode.Consumer>
+      )
+    }else  return (
+    <Err>
       <LightMode.Consumer>
           {
               context=>(
-        <div className={`row pt-4 bg-${context.mode} text-${context.mode=='light'?'dark':'light'} m-0 pl-2`} style={{minHeight:'93%'}}>
+        <div className={`row pt-4 bg-${context.mode} text-center text-${context.mode=='light'?'dark':'light'} m-0 pl-2`} style={{minHeight:'93%'}}>
             {/* <h1>category </h1> */}
             { 
                 data.products.map((res)=>{
@@ -50,5 +63,6 @@ export default ()=> {
               )
           }
       </LightMode.Consumer>
+    </Err>
   );
 }

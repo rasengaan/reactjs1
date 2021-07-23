@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import { LightMode } from "../context/context";
 import * as test from "../data/data.json";
+import { Err } from "../error/Err";
 
 export const Home = (props) => {
 //   const [category, setcategory] = useState("initialState");
 
   return (
+    <Err>
     <LightMode.Consumer>
       {(context) => (
         <div
@@ -49,5 +51,6 @@ export const Home = (props) => {
         </div>
       )}
     </LightMode.Consumer>
+    </Err>
   );
 };
