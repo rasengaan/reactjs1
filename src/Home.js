@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { P1 } from "./P1";
 import {Err} from './Err';
+import Refs from './Refs';
 
 export default class Home extends React.Component {
     constructor(props){
@@ -39,7 +40,10 @@ export default class Home extends React.Component {
                 <button onClick={()=>this.err()}>Throw Err in P1</button>
                 <Err>
                     <P1 errP1={this.state.errP1}/>
+                    <p className="m-3">Refs in use</p>
+                    <Refs></Refs>
                 </Err>
+
             </div>
         );
     }
