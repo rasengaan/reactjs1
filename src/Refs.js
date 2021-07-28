@@ -14,20 +14,11 @@ import React, { useRef } from "react";
 
 export default (props) => {
 
-    const textInput = useRef(null);
-
-  let handleClick = () => {
-    textInput.current.focus();
-  };
 
   return (
     <div>
-      <input type="text" ref={textInput} />
-      <input
-        type="button"
-        value="Focus the text input"
-        onClick={handleClick}
-      />
+      <button ref={props.reef}>button</button>
+      <input type="button" value="Focus the text input" onClick={props.click} />
     </div>
   );
 };

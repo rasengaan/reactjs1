@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { P1 } from "./P1";
 import {Err} from './Err';
 import Refs from './Refs';
@@ -12,7 +12,10 @@ export default class Home extends React.Component {
             errP1:false
         }
         this.err = this.err.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    textInput = React.createRef()
 
     componentDidUpdate(){
         console.log(this.state)
@@ -29,6 +32,9 @@ export default class Home extends React.Component {
             this.setState({style:{color:"red",backgroundColor:'rgb(57, 250, 32)'} ,text:"Content Changed after 5000ms."});
         }, 5000);
     }
+    handleClick = () => {
+        this.textInput.current.focus();
+      };
 
     render(){
         return(
@@ -41,7 +47,10 @@ export default class Home extends React.Component {
                 <Err>
                     <P1 errP1={this.state.errP1}/>
                     <p className="m-3">Refs in use</p>
-                    <Refs></Refs>
+                    <Refs reef={this.textInput} click={this.handleClick}></Refs>
+                    <Refs reef={this.textInput} click={this.handleClick}></Refs>
+                    <Refs reef={this.textInput} click={this.handleClick}></Refs>
+                    <Refs reef={this.textInput} click={this.handleClick}></Refs>
                 </Err>
 
             </div>
