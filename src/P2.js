@@ -18,6 +18,7 @@ export const P2 = (props) => {
                 P2 Receiving Props!
                 <br />
                 Prop: {props.test.key}
+                PropType: {typeof props.test.key}
               </h2>
               <span style={{ color: fontColor.color }}>
                 Change color using top buttons
