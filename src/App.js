@@ -16,6 +16,8 @@ export default class App extends React.Component {
   render() {
     return (
       <FontColorContext.Provider value={{ color: this.state.color }}>
+        <h3>these button decide the context</h3>
+        <br/>
         <span>
           <button className="btn-sm" onClick={() => this.setColor("red")}>
             red

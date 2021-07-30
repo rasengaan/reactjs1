@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { FontColorContext } from "./context";
 
 export const P2 = (props) => {
-  console.log(props);
+  // console.log(props);
 
   if (props.errP2) {
     throw new Error("Throwing new Error from P2!");
