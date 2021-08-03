@@ -2,11 +2,28 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import { LightMode } from "../context/context";
-import * as test from "../data/data.json";
+// import * as test from "../data/data.json";
 import { Err } from "../error/Err";
 
 export const Home = (props) => {
-//   const [category, setcategory] = useState("initialState");
+  const [categories, setcategories] = useState(null);
+
+  const getData = () => {
+    fetch("/data/data.json")
+      .then((response)=> {
+        return response.json();
+      })
+      .then((data) => {
+        setcategories(data.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <Err>
@@ -19,27 +36,39 @@ export const Home = (props) => {
           style={{ minHeight: "93%" }}
         >
           <div className={`row m-0 pt-5`}>
-            {test.data.map((res) => {
+            {categories?.map((res) => {
               return (
                 <div
-                  className={`mb-3 col-lg-4 col-md-6 col-sm-12 bg-${context.mode} `}
+                  className={`mb-5 col-lg-4 col-md-6 col-sm-12 bg-${context.mode} mt-0`}
                   style={{ margin: "auto" }}
                 >
-                  <Link to={`/products/${res.name}`}>
+                  <Link to={`/products/${res.category}`}>
                     <div
-                      className={`card bg-${context.mode} text-center p-1 border-${context.mode=='light'?'dark':'light'}`}
-                      style={{ width: "80%", margin: "0 auto" }}
+                      className={`card  text-center p-1 border-${context.mode=='light'?'dark':'light'} h-100`}
+                      style={{ width: "80%", margin: "0 auto",backgroundColor:
+                      context.mode === "dark"
+                        ? "rgb(49, 49, 49)"
+                        : "#C0C0C0" }}
                     >
-                      <img
-                        src={res.img}
-                        className="card-img-top"
-                        alt={res.name}
-                      />
+                      <div style={{height:"30vh",
+  display: 'flex',
+  justifyContent:' center'}}>
+                        <img
+                          src={res.img}
+                          className="card-img"
+                          alt={res.name}
+                          style={{
+                            maxHeight: "100%",
+                            width: "auto",
+                            maxWidth: "100%",
+                            margin: "auto",
+                          }}
+                        />
+                        </div>
                       <div className="card-body">
                         <h5 className="card-title">{res.name}</h5>
                         <p className="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
+                          {res.info}
                         </p>
                       </div>
                     </div>

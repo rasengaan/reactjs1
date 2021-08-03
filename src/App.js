@@ -8,35 +8,34 @@ import Product from "./components/Product";
 import Header from "./components/Header";
 import { Err } from "./error/Err";
 import NotFound from "./components/404";
+// import * as data from "./data/data.json";
+
 function App() {
   const [mode, setmode] = useState("dark");
 
   return (
     <Err>
-    <LightMode.Provider value={{ mode: mode }}>
-      <Router>
-        <Header
-          changeLightMode={() => setmode(mode == "dark" ? "light" : "dark")}
-        ></Header>
-      <Switch>
-        <Route path="/home" exact>
-          <Home/>
-        </Route>
-        <Route
-          path="/products/:categoryName"
-          exact
-        >
-          <Category/>
-        </Route>
-        <Route path="/product/:productId" exact>
-          <Product/>
-        </Route>
-        <Route path="/**" >
-          <NotFound/>
-        </Route>
-      </Switch>
-      </Router>
-    </LightMode.Provider>
+      <LightMode.Provider value={{ mode: mode }}>
+        <Router>
+          <Header
+            changeLightMode={() => setmode(mode == "dark" ? "light" : "dark")}
+          ></Header>
+          <Switch>
+            <Route path="/home" exact>
+              <Home />
+            </Route>
+            <Route path="/products/:categoryName" exact>
+              <Category />
+            </Route>
+            <Route path="/product/:productId" exact>
+              <Product />
+            </Route>
+            <Route path="/**">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </LightMode.Provider>
     </Err>
   );
 }
