@@ -17,6 +17,7 @@ export const Home = (props) => {
         setcategories(data.data);
       })
       .catch((err) => {
+        setcategories(null)
         console.error(err);
       });
   };

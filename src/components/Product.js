@@ -16,6 +16,7 @@ export default ()=> {
         setres(data.data[Number(id.split('.')[0])-1].products[Number(id.split('.')[1])-1]);
       })
       .catch(err=>{
+        setres(null)
         console.error(err);
       })
   }
@@ -25,7 +26,7 @@ export default ()=> {
   },[])
 
 
-if(res===undefined || res===null || res==='')
+if(res===undefined || res===null)
   return(
   <LightMode.Consumer>
     {

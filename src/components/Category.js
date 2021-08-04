@@ -20,6 +20,7 @@ export default () => {
         setData(data.data[Number(id.split("y")[1]) - 1]);
       })
       .catch((err) => {
+        setData(null)
         console.error(err);
       });
   };
@@ -29,7 +30,7 @@ export default () => {
   }, [id]);
 
 
-  if (data === undefined || data === null || data==="") {
+  if (data === undefined || data === null) {
     return (
       <LightMode.Consumer>
         {(context) => (
