@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { LightMode } from "./context/context";
+import "./App.css";
+import { Home } from "./components/Home";
+import Category from "./components/Category";
+import Product from "./components/Product";
+import Header from "./components/Header";
+import { Err } from "./error/Err";
+import NotFound from "./components/404";
+// import * as data from "./data/data.json";
 
 function App() {
+  const [mode, setmode] = useState("dark");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Err>
+      <LightMode.Provider value={{ mode: mode }}>
+        <Router>
+          <Header
+            changeLightMode={() => setmode(mode == "dark" ? "light" : "dark")}
+          ></Header>
+          <Switch>
+            <Route path="/home" exact>
+              <Home />
+            </Route>
+            <Route path="/products/:categoryName" exact>
+              <Category />
+            </Route>
+            <Route path="/product/:productId" exact>
+              <Product />
+            </Route>
+            <Route path="/**">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </LightMode.Provider>
+    </Err>
   );
 }
 
